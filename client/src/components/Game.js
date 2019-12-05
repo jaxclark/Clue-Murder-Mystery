@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import { withClue } from '../context/ClueProvider'
-// import ding from '../sounds/Ding.mp3'
-
 
 class Game extends Component {
     constructor(){
@@ -16,7 +14,6 @@ class Game extends Component {
     }
 
     handleTutorialToggle = e => {
-        
         if(e.target.value === 'tutorial'){
             this.setState({tutorial: 'tutorial'})
         } else {
@@ -29,8 +26,6 @@ class Game extends Component {
         const currentArr = this.state.openClues
         const isOpen = !this.state.openClues[clueNum]
         currentArr.splice(clueNum, 1, isOpen)
-        // const themeDing = new Audio(ding)
-        // themeDing.play()
         this.setState(() => ({
             openClues: currentArr
         }))
@@ -40,7 +35,6 @@ class Game extends Component {
     }
 
     addFoundClue = (inputClue, idName, clueNum) => {
-        
         this.props.saveClue(inputClue)
         this.props.updateClickCount()
         if(this.props.dead === true){
@@ -50,10 +44,8 @@ class Game extends Component {
         foundDiv.classList.add('hidden')
         this.props.handleHideClues(clueNum)
     }
-   
 
     render() {
-        
         return(
             <div className='gameDiv'>
                 {this.props.needTutorial
@@ -219,7 +211,6 @@ class Game extends Component {
                             </div>   
                         }
                     </div>
-
                 }
             </div>
         )

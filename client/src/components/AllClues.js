@@ -4,9 +4,7 @@ import {withClue} from '../context/ClueProvider'
 const AllClues = (props) => {
     const myClue= {
         name: props.name
-        // description: props.description
     }
-
 
     return(
         <div>

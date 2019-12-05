@@ -25,14 +25,14 @@ class ClueProvider extends Component {
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
             showCharAlibi: [false, false, false, false, false, false],
             attempts: 3,
-            canPlay: false
+            canPlay: false,
+            hasPlayed: false,
         }
     }
 
     sound = () => {
         this.setState({
-            canPlay: true
-        })
+            canPlay: true})
     }
 
     stopPlay = () => {
@@ -40,20 +40,26 @@ class ClueProvider extends Component {
             canPlay: false
         })
     }
+
+    songHasPlayed = () => {
+        this.setState ({
+            hasPlayed: true
+        })
+    }
+
     tries = () => {
         this.setState(prevState => ({
             attempts: prevState.attempts -= 1
         }))
     }
-    getAll = () => {
     
+    getAll = () => {
         axios.get('/weapon')
             .then(res => {
                 this.setState({
                     weapons:res.data,
                 })
                 this.chooseWeapon()
-
                 axios.get('/clue')
                     .then(res => {
                         this.setState({
@@ -71,9 +77,6 @@ class ClueProvider extends Component {
                     .catch(err => console.log(err))
                     })
                     .catch(err => console.log(err))
-        
-        
-        
         axios.get('/character')
             .then(res => {
                 this.setState({
@@ -81,7 +84,6 @@ class ClueProvider extends Component {
                 })
                 this.chooseKiller()
             })
-
     }
 
     chooseWeapon = () => {
@@ -89,13 +91,10 @@ class ClueProvider extends Component {
         this.setState({
             murderWeapon: this.state.weapons[weaponIndex]
         })
-        
     }
-
 
     chooseKiller = () => {
         const killerIndex = Math.floor(Math.random()*(this.state.characters.length))
-        console.log(killerIndex)
         this.setState({
             killer: this.state.characters[killerIndex]
         })
@@ -103,25 +102,18 @@ class ClueProvider extends Component {
 
     popWeaponFromClues = () => {
         const newClues = this.state.clues.filter(weapon => (weapon.name !== this.state.murderWeapon.name))
-        console.log(this.state.murderWeapon.name)
         this.setState({clues: newClues})
-        console.log(this.state.murderWeapon.name, newClues)
     }
 
-    
-
-    // function so player can set their title and name
     chooseName = (name, title) => {
         this.setState({name: name})
         this.setState({title: title})
     }
 
     saveClue = (myClue) => {
-        
         this.setState(prevState => ({
             foundClues:[...prevState.foundClues, myClue]
         }))
-        
     }
 
     guess = (murderer, weapon) => {
@@ -132,7 +124,6 @@ class ClueProvider extends Component {
                     hasWon: true
                 })
             console.log("Player Won")
-            
         } else {
             this.setState(prevState =>({
                 accuseCount: prevState.accuseCount -= 1
@@ -141,11 +132,11 @@ class ClueProvider extends Component {
                
                 this.setState({
                     lostCount: true
-                }) 
-                
+                })
             }
         }
     }
+
     handleRestartClick = () => {
         this.setState({
             clues: [],
@@ -169,34 +160,26 @@ class ClueProvider extends Component {
             canPlay: false
         })
         this.getAll()
-        
     }
 
-    
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
         if(this.state.clickedCount < 9) {
-            console.log('safe')
         } else if(this.state.clickedCount >= 9 && this.state.clickedCount < 14) {
             let randroll = Math.floor(Math.random() * 20)
             if(randroll === 0){
                 this.setState({dead: true})
             }
-            console.log('rand: ', + randroll)
-            console.log('less safe')
         } else if(this.state.clickedCount >= 14 && this.state.clickedCount < 20) {
             let randroll = Math.floor(Math.random() * 14)
             if(randroll === 0){
                 this.setState({dead: true})
             }
-            console.log('rand: ', + randroll)
-            console.log('unsafe')
         } else if(this.state.clickedCount >= 20) {
             let randroll = Math.floor(Math.random() * 8)
             if(randroll === 0){
                 this.setState({dead: true})
             }
-            console.log('rand: ', + randroll)
         }
     }
 
@@ -206,12 +189,8 @@ class ClueProvider extends Component {
 
     handleHideClues = (clueNum) => {
         const currentArr = this.state.hideClues
-        // console.log(`firstArr: ${currentArr}`)
         const isHidden = !this.state.hideClues[clueNum]
         currentArr.splice(clueNum, 1, isHidden)
-        // console.log(`secondeArr: ${currentArr}`)
-        // console.log(`clueNum: ${clueNum}`)
-        // console.log(`isHidden: ${isHidden}`)
         this.setState(() => ({
             hideClues: currentArr
         }))
@@ -219,17 +198,14 @@ class ClueProvider extends Component {
 
     handleShowCharAlibi = (index) => {
         const currentArr = this.state.showCharAlibi
-
         const changeTo = !this.state.showCharAlibi[index]
         currentArr.splice(index, 1, changeTo)
-
         this.setState({
             showCharAlibi: currentArr
         })
     }
     
     render() {
-        console.log(this.state.clickedCount)
         return (
             <ClueContext.Provider
                 value = {{
@@ -246,14 +222,13 @@ class ClueProvider extends Component {
                     handleShowCharAlibi: this.handleShowCharAlibi,
                     tries: this.tries,
                     sound: this.sound,
-                    stopPlay: this.stopPlay
+                    stopPlay: this.stopPlay,
+                    songHasPlayed: this.songHasPlayed
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
-
         )
     }
-
 }
 
 export default ClueProvider

@@ -29,7 +29,6 @@ class Accusation extends Component {
         } else if (this.state.murderer === this.props.killer.name && this.state.weapon === this.props.murderWeapon.name) {
             this.props.history.push('/gameWon')
         } else {
-            console.log(this.props.lostCount)
             if(this.props.lostCount === true){
                 this.props.history.push('/gameOver')
             
@@ -41,7 +40,6 @@ class Accusation extends Component {
         }
     }
 
-    
     render() {
         const mappedCharacter = this.props.characters.map((character) => <Character {...character} name={character.name} path={this.props.location.pathname} key={character._id} handleChange={this.handleChange} murderer={this.state.murderer} />)
         const mappedWeapon = this.props.weapons.map((weapon) => <Weapon {...weapon} key={weapon._id}  path={this.props.location.pathname} weapon={this.state.weapon} handleChange={this.handleChange}/>)

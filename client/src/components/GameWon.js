@@ -3,11 +3,11 @@ import { withClue } from '../context/ClueProvider';
 import Confetti from 'react-confetti';
 
 class GameWon extends Component {
-
     handleClick = () => {
         this.props.history.push('/')
         this.props.handleRestartClick()
     }
+
     render() {
         return (
             <div className='gameOver'>
@@ -20,6 +20,5 @@ class GameWon extends Component {
         )
     }
 }
-
 
 export default withClue(GameWon)

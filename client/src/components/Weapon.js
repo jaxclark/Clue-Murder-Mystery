@@ -2,14 +2,11 @@ import React from 'react'
 import {withClue} from '../context/ClueProvider'
 
 const Weapon = (props) => {
-
     const {name, description, imgUrl, path, handleChange, weapon} = props
-
     let filtered = props.foundClues.filter(ind => {
         return ind.name === name
     })
     let myClass
-    
         path === '/accuse-suspect'
         ?
             name === weapon
@@ -45,7 +42,6 @@ const Weapon = (props) => {
                             :
                             null
                         }
-                    
                 </div>
             </div>
         }

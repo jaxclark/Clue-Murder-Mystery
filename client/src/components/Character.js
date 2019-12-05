@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider'
 
-
 class Character extends Component { 
-
     constructor() {
         super()
         this.state = {
@@ -11,6 +9,7 @@ class Character extends Component {
             showAlibi: false
         }
     }
+
     componentDidMount() {
         let filtered = this.props.foundClues.filter(ind => {
             return ind.character === this.props.name
@@ -25,28 +24,22 @@ class Character extends Component {
             canQuestion: false
         })
 
-        
     }
+
     question = () => {
         this.props.updateClickCount()
         this.setState({
             showAlibi: true
         })
-        
         if(this.props.dead === true){
             this.props.history.push('/gameOver')
         }
-       
-       //change index in context showCharAlibi
        this.props.handleShowCharAlibi(this.props.index)
     }
-    
-
 
  render() {
     const {name, age, description, imgUrl, path, handleChange, murderer, killer} = this.props
     let myClass
-    
         path === '/accuse-suspect'
         ?
             name === murderer
@@ -56,8 +49,7 @@ class Character extends Component {
             myClass = 'accusationChar'
         :
          myClass = 'character'
-    
-    
+
         return (
             <>
                 {
@@ -65,10 +57,6 @@ class Character extends Component {
                     ?
                     <button className = {myClass} onClick={() => handleChange('murderer', name)}>
                         <div className='accuseCharCards'>
-                            {/* <h5>{name}</h5>
-                            <h6>{gender}</h6>
-                            <h6>{age}</h6>
-                            <p>{description}</p> */}
                             <img className='accuseCharCardImage' src={imgUrl} alt="pic"/>
                         </div>
                     </button>
@@ -77,8 +65,6 @@ class Character extends Component {
                         <div className='charCards'>
                             <img className='charCardImage' src={imgUrl} alt="pic"/>
                             <h5>{name}, {age}</h5>
-                            {/* <h6>{gender}</h6> */}
-                            {/* <h6>{age}</h6> */}
                             <p>{description}</p>
                             {
                                 this.state.canQuestion ?
@@ -86,12 +72,9 @@ class Character extends Component {
                                 :
                                 null
                             }
-                        {/* </div>
-                        <div className="questionSus"> */}
                             {
                                 this.props.showAlibi || this.props.showCharAlibi[this.props.index]
                                 ?
-                                
                                     name !== killer.name
                                     ?
                                     <h5 className='suspectAlibi'>"{this.props.alibiTxt}"</h5>
@@ -99,7 +82,6 @@ class Character extends Component {
                                     <h5 className='suspectGuilty'>"{this.props.guiltyTxt}"</h5>
                                 :
                                 null
-                                    
                             }
                         </div>
                     </div>

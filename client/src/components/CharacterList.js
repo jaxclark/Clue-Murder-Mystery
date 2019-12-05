@@ -7,7 +7,6 @@ import particlesJSON from '../particlesjs-config.json'
 const particlesVar = particlesJSON
 
 const CharacterList = props => {
-   
     const mappedCharacter = props.characters.map((character, i) => <Character {...character} history={props.history} key={character._id} index={i} />)
 
     return(
