@@ -12,7 +12,7 @@ class Navbar extends Component {
            themeSong.play()
            this.props.stopPlay()
            this.props.songHasPlayed()
-        } 
+        }
     }
 
     render() {
