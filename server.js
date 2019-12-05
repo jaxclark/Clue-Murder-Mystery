@@ -7,10 +7,11 @@ const PORT = process.env.PORT || 8000
 
 app.use(express.json())
 app.use(morgan("dev"))
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 app.use("/clue", require("./routes/ClueRouter"))
 app.use("/character", require("./routes/CharacterRouter"))
 app.use("/weapon", require("./routes/WeaponRouter"))
-app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cluedb',
     {
