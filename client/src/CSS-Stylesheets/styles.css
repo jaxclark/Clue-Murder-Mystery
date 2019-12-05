@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+#Navbar {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    justify-content: space-evenly;
+    height: 50px;
+    background-color: #101;
+    line-height: 50px;
+    margin: 0;
+    /* transition: top 0.6s; */
+    z-index: 1;
+}
+.Navbar-link {
+    color: white;
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 16px;
+}
+.Navbar-link-active {
+    color: #c8102e;
+}
+.landingDivImage {
+    background: url("../images/HouseLanding-top.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: grey;
+    position: absolute;
+    top: 0px;
+    height: 101vh;
+    width: 100vw;
+    margin: 0px;
+}
+.landingDiv {
+    position: absolute;
+    top: 200px;
+    /* height: 101vh; */
+    width: 100vw;
+    margin: 0px;
+    /* padding-bottom: 200px; */
+}
+.logo {
+    height: 35px;
+    width: auto;
+    margin: 7.5px auto;
+}
+#NavbarBare {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    justify-content: space-evenly;
+    height: 75px;
+    background-color: #101;
+    line-height: 50px;
+    margin: 0;
+    /* transition: top 0.6s; */
+    z-index: 1;
+}
+.logoWide {
+    height: 70px;
+    width: auto;
+    margin: 7.5px auto;
+}
+.landingForm {
+    margin: 40vh auto 0px;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0.788);
+    padding: 25px;
+    width: 550px;   
+    box-shadow: rgb(75, 74, 74) 3px 3px 7px;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+.landingTitle {
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: italic;
+}
+.landingTitleInput {
+    margin: 10px;
+    padding: 2px 5px;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+.landingTitleSubmit {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #c8102e;
+    font-family: Montserrat;
+    font-size: 14px;
+    border-radius: 10px;
+    color: whitesmoke;
+    border: none;
+}
+/* .startGameButtonDiv {
+    text-align: center;
+    margin-top: 30px;
+} */
+.startGameButton {
+    margin-left: 10px;
+    padding: 7.5px 12.5px;
+    background-color: #c8102e;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.781) 1px 1px 20px;
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+.landingWelcome {
+    margin: 0px;
+}
+.landingWelcomeExplanation {
+    font-family: Roboto;
+    font-size: 16px;
+    margin: 10px 20px;
+}
+
+.particles canvas {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@media screen and (min-width: 800px) {
+    #NavbarBare {
+        height: 75px;
+    }
+    .logoWide {
+        height: 65px;
+        margin: 5.5px auto;
+    }
+    .landingDivImage {
+        position: absolute;
+        top: 0px;
+        height: 106%;
+        width: 100%;
+    }
+    .landingForm {
+        margin: 38vh auto 10px;
+        font-size: 16px;
+        padding: 15px;
+        top: 0;
+    }
+    .startGameButton {
+        background-color: #c8102e;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .landingForm {    
+        margin: 45vh auto 10px;
+        font-size: 16px;
+        padding: 15px;
+    }
+    .landingDivImage {
+        background: url("../images/HouseLanding-top.jpg") no-repeat top 40% center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-color: grey;
+        position: absolute;
+        top: 0px;
+        height: 101vh;
+        width: 100vw;
+        margin: 0px;
+    }
+}

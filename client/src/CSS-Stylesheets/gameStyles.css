@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
+
+.gameDiv {
+    background: url("../images/Bedroom.jpg") ;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 1803px;
+    max-height: 801px;
+}
+.gameForm {
+    margin-top: 50px;
+    width: 100vw;
+}
+.gameInterviewButton {
+    margin: 10px;
+    font-family: Montserrat;
+}
+.gameInterviewSuspect {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: 600;
+    background-color: white;
+    border: 2px solid black;
+    min-height: 100px;
+}
+.gameTutorial {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: 540px;
+    margin-top: -180px;
+    margin-left: -270px;
+    border-radius: 8px;
+    background-color: rgba(250, 235, 215, 0.788);
+    text-align: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.671) 2px 2px 10px;
+
+}
+.gameTutorialName {
+    font-weight: 600;
+    font-family: Roboto;
+    font-size: 20px;
+    padding: 5px;
+}
+.gameTutorialHeader {
+    margin: 35px 0px 20px 0px;
+    font-family: Montserrat;
+    font-size: 28px;
+}
+.gameTutorialButton {
+    height: 30px;
+    width: 60px;
+    font-size: 16px;
+    margin: 12px 8px 20px 8px;
+    background-color: #c8102e;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.671) 2px 2px 5px;
+    border: none;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    color: whitesmoke;
+}
+.gameTutorialText {
+    font-family: Roboto;
+    font-size: 18px;
+    padding: 5px;
+}
+.gameClueDivSHOW-1 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 230px;
+    left: 1425px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-1 {
+    height: 160px;
+    width: 180px;
+    position: absolute;
+    top: 245px;
+    left: 1455px;
+}
+.gameClueDivHIDE-1:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-2 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 380px;
+    left: 300px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-2 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 415px;
+    left: 385px;    
+}
+.gameClueDivHIDE-2:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+
+.gameClueDivSHOW-3 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 550px;
+    left: 820px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-3 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 550px;
+    left: 875px;
+}
+.gameClueDivHIDE-3:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-4 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 365px;
+    left: 430px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-4 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 425px;
+    left: 485px;
+}
+.gameClueDivHIDE-4:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-5 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 550px;
+    left: 400px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-5 {
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    top: 560px;
+    left: 420px;
+}
+.gameClueDivHIDE-5:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 60%);
+}
+.gameClueDivSHOW-6 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 425px;
+    left: 600px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-6 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 435px;
+    left: 605px;
+}
+.gameClueDivHIDE-6:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.253) 20%, rgba(245, 232, 161, 0) 65%);
+}
+.gameClueDivSHOW-7 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 365px;
+    left: 830px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-7 {
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    top: 440px;
+    left: 880px;
+}
+.gameClueDivHIDE-7:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-8 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 305px;
+    left: 605px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-8 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 400px;
+    left: 700px;
+}
+.gameClueDivHIDE-8:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-9 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 520px;
+    left: 1400px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-9 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 550px;
+    left: 1440px;
+}
+.gameClueDivHIDE-9:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-10 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 455px;
+    left: 1030px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-10 {
+    height: 120px;
+    width: 90px;
+    position: absolute;
+    top: 450px;
+    left: 1100px;
+}
+.gameClueDivHIDE-10:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueDivSHOW-11 {
+    height: auto;
+    width: 175px;
+    background-color: rgba(250, 235, 215, 0.788);
+    position: absolute;
+    top: 110px;
+    left: 850px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #666 5px 5px 7px;
+}
+.gameClueDivHIDE-11 {
+    height: 100px;
+    width: 120px;
+    position: absolute;
+    top: 110px;
+    left: 905px;
+}
+.gameClueDivHIDE-11:hover {
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+}
+.gameClueTitle {
+    font-family: Roboto;
+    font-weight: 600;
+    margin: 5px auto;
+    font-size: 16px;
+    text-align: center;
+}
+.gameClueDescription {
+    font-family: Montserrat;
+    font-weight: 500;
+    margin: 5px auto;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+}
+.gameAddClueButton {
+    padding: 8px 10PX;
+    border-radius: 5px;
+    margin: 5px auto;
+    background: #c8102e;
+    font-size: 12px;
+    color: whitesmoke;
+}
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .gameDiv {
+        height: 1024px;
+        width: 2308px;
+        max-height: 1025px;
+    }
+    .gameClueDivSHOW-1 {
+        top: 320px;
+        left: 1875px;
+    }
+    .gameClueDivHIDE-1 {
+        top: 335px;
+        left: 1875px;
+    }
+    .gameClueDivHIDE-1:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-2 {
+        top: 500px;
+        left: 425px;
+    }
+    .gameClueDivHIDE-2 {
+        top: 555px;
+        left: 500px;    
+    }
+    .gameClueDivHIDE-2:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+
+    .gameClueDivSHOW-3 {
+        top: 725px;
+        left: 1100px;
+    }
+    .gameClueDivHIDE-3 {
+        top: 750px;
+        left: 1150px;
+    }
+    .gameClueDivHIDE-3:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-4 {
+        top: 485px;
+        left: 595px;
+    }
+    .gameClueDivHIDE-4 {
+        top: 570px;
+        left: 625px;
+    }
+    .gameClueDivHIDE-4:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-5 {
+        top: 730px;
+        left: 520px;
+    }
+    .gameClueDivHIDE-5 {
+        top: 750px;
+        left: 560px;
+    }
+    .gameClueDivHIDE-5:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 60%);
+    }
+    .gameClueDivSHOW-6 {
+        top: 525px;
+        left: 775px;
+    }
+    .gameClueDivHIDE-6 {
+        top: 555px;
+        left: 800px;
+    }
+    .gameClueDivHIDE-6:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.253) 20%, rgba(245, 232, 161, 0) 65%);
+    }
+    .gameClueDivSHOW-7 {
+        top: 565px;
+        left: 1130px;
+    }
+    .gameClueDivHIDE-7 {
+        top: 600px;
+        left: 1180px;
+    }
+    .gameClueDivHIDE-7:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-8 {
+        top: 455px;
+        left: 875px;
+    }
+    .gameClueDivHIDE-8 {
+        top: 525px;
+        left: 905px;
+    }
+    .gameClueDivHIDE-8:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-9 {
+        top: 720px;
+        left: 1830px;
+    }
+    .gameClueDivHIDE-9 {
+        top: 730px;
+        left: 1850px;
+    }
+    .gameClueDivHIDE-9:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-10 {
+        top: 555px;
+        left: 1350px;
+    }
+    .gameClueDivHIDE-10 {
+        top: 600px;
+        left: 1420px;
+    }
+    .gameClueDivHIDE-10:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueDivSHOW-11 {
+        top: 110px;
+        left: 1105px;
+    }
+    .gameClueDivHIDE-11 {
+        top: 170px;
+        left: 1145px;
+    }
+    .gameClueDivHIDE-11:hover {
+        border-radius: 50%;
+        background-image: radial-gradient(circle, rgba(245, 232, 161, 0.507) 20%, rgba(245, 232, 161, 0) 70%);
+    }
+    .gameClueTitle {
+        margin: 5px auto;
+        font-size: 18px;
+    }
+    .gameClueDescription {
+        margin: 5px auto;
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .gameTutorialButton {
+        margin-bottom: 40px;
+    }
+    .gameTutorialText {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    .gameClueTitle {
+        font-size: 18px;
+    }
+    .gameClueDescription {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .gameAddClueButton {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}

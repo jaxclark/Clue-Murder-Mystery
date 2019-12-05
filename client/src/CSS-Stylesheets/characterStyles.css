@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
+
+.characterContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+    /* grid-gap: 30px; */
+    padding-left: 25px;
+    padding-right: 10px;
+    padding-bottom: 100px;
+    background-color: #165d30ed;
+    border: none;
+    height: 100%;
+    min-height: 100vh;
+}
+.character {
+    margin-top: 40px;
+    border: none;
+    padding-bottom: 40px;
+}
+.character>img {
+    margin: auto;
+    width: 180px;
+}
+.charCards {
+    width: 250px;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0.788);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+.charCardImage {
+    width: 225px;
+    position: relative;
+    left: -1px;
+}
+.particle-canvas {
+    position:fixed !important;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+h5 {
+    font-family: Montserrat;
+    font-size: 18px;
+    margin: 5px;
+}
+h6 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+}
+p {
+    font-family: Roboto;
+    font-size: 14px;
+    margin: 5px;
+    line-height: 1.6;
+}
+.questionSuspectButton {
+    background-color: #c8102e;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 5px 10px;
+    border: none;
+    font-family: Montserrat;
+    font-size: 15px;
+    margin: 10px;
+    box-shadow: #666 2px 2px 5px;
+}
+.suspectAlibi {
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 15px; 
+    line-height: 1.4;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: #aa0722;
+    border-top: black solid 1px;
+}
+.suspectGuilty {
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 15px; 
+    line-height: 1.4;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: #aa0722;
+    border-top: black solid 1px;
+}
+
+@media screen and (min-width: 800px) {
+    .characterContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 200px;
+    }
+    .charCards {
+        width: 200px;
+    }
+    .charCardImage {
+        width: 185px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .characterContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .charCards {
+        width: 150px;
+        border: none;
+    }
+    .h5 {
+        font-size: 13px 
+    }
+    .charCardImage {
+        width: 145px;
+    }
+}
